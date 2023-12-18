@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  yarn:
+    image: node:21
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn
+
+  postgres:
+    image: bitnami/postgresql:15.5.0
+    environment:
+      - POSTGRESQL_DATABASE=db
+      - POSTGRESQL_USERNAME=root
+      - POSTGRESQL_PASSWORD=root
+    ports:
+      - "5432:5432"
+
+  service-first:
+    image: node:21
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn workspace @service/entrypoint dev
+    environment:
+      - DB_HOST=postgres
+    ports:
+      - "9000:9000"
+    depends_on:
+      yarn:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_started

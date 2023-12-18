@@ -1,0 +1,10 @@
+{
+	"name": "@shared/validation",
+	"main": "mod.ts",
+	"dependencies": {
+		"zod": "3.22.4"
+	},
+	"devDependencies": {
+		"@types/express": "4.17.21"
+	}
+}

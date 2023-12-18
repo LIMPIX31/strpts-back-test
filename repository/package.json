@@ -1,0 +1,16 @@
+{
+	"name": "@service/repository",
+	"main": "mod.ts",
+	"dependencies": {
+		"pg": "8.11.3",
+		"pg-hstore": "2.3.4",
+		"sequelize": "6.35.2",
+		"sequelize-typescript": "patch:sequelize-typescript@npm%3A2.1.6#~/.yarn/patches/sequelize-typescript-npm-2.1.6-6cf9e2c703.patch",
+		"umzug": "3.5.0"
+	},
+	"devDependencies": {
+		"@types/node": "20.10.5",
+		"@types/validator": "13.11.7",
+		"reflect-metadata": "0.2.1"
+	}
+}

@@ -1,0 +1,13 @@
+diff --git a/dist/sequelize/sequelize/sequelize.js b/dist/sequelize/sequelize/sequelize.js
+index 78d978b7c478a6a99d490bb2d3ee510da15e1bc1..e64b3f2ca93667007138e9456c267135ecd5fcb2 100644
+--- a/dist/sequelize/sequelize/sequelize.js
++++ b/dist/sequelize/sequelize/sequelize.js
+@@ -70,7 +70,7 @@ class Sequelize extends sequelize_1.Sequelize {
+                 .concat(indexes.unnamed);
+             const initOptions = Object.assign(Object.assign(Object.assign({}, (indexArray.length > 0 && { indexes: indexArray })), modelOptions), { modelName, sequelize: this });
+             const definedModel = this.repositoryMode ? this.createRepositoryModel(model) : model;
+-            definedModel.initialize(attributes, initOptions);
++            definedModel.init(attributes, initOptions);
+             return definedModel;
+         });
+     }

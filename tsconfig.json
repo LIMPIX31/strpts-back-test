@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "useDefineForClassFields": true,
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+    "types": [
+      "vite/client"
+    ],
+    "paths": {
+      "@test/benchmark": [
+        "benchmark"
+      ],
+      "@service/controllers": [
+        "controllers"
+      ],
+      "@service/entrypoint": [
+        "entrypoint"
+      ],
+      "@service/repository": [
+        "repository"
+      ],
+      "@service/services": [
+        "services"
+      ],
+      "@shared/app": [
+        "shared/app"
+      ],
+      "@shared/exceptions": [
+        "shared/exceptions"
+      ],
+      "@shared/validation": [
+        "shared/validation"
+      ]
+    }
+  },
+  "include": [
+    "**/*"
+  ]
+}

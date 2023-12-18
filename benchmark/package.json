@@ -1,0 +1,7 @@
+{
+	"name": "@test/benchmark",
+	"type": "module",
+	"scripts": {
+		"start": "node main.mjs"
+	}
+}
