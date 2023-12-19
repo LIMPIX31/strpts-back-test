@@ -4,7 +4,7 @@
 		"dev": "yarn service dev main.ts"
 	},
 	"dependencies": {
-		"@service/controllers": "workspace:",
+		"@service/routes": "workspace:",
 		"@shared/app": "workspace:",
 		"@shared/exceptions": "workspace:",
 		"express": "5.0.0-beta.1"

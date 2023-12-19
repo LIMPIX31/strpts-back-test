@@ -1,2 +1,1 @@
-/* eslint-disable prettier/prettier */
-import './user.ts'
+export * as UserController from './user/mod.ts'

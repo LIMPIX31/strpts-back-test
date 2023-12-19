@@ -1,33 +1,12 @@
-import { Op }         from 'sequelize'
-
-import { User }       from '@service/repository'
-import { BadRequest } from '@shared/exceptions'
-import { NotFound }   from '@shared/exceptions'
+import { UserRepository } from '@service/repository'
+import { BadRequest }     from '@shared/exceptions'
 
 export async function change(userId: string, amount: number) {
-	{
-		const user = await User.findByPk(userId)
+	const changedUser = await UserRepository.updateBalanceById(userId, amount)
 
-		if (!user) {
-			throw new NotFound()
-		}
+	if (!changedUser) {
+		throw new BadRequest('User is not found or has insufficient funds')
 	}
 
-	const [[rows, count]]: any = await User.increment('balance', {
-		by: amount,
-		where: {
-			id: userId,
-			balance: {
-				[Op.gte]: amount > 0 ? 0 : -amount,
-			},
-		},
-	})
-
-	if (!count || count === 0) {
-		throw new BadRequest('Insufficient funds in the account')
-	}
-
-	const [{ balance }] = rows
-
-	return balance
+	return changedUser.balance
 }

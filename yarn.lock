@@ -662,7 +662,7 @@ __metadata:
   resolution: "@service/entrypoint@workspace:entrypoint"
   dependencies:
     "@lmpx-config/vite-service": "npm:0.0.5"
-    "@service/controllers": "workspace:"
+    "@service/routes": "workspace:"
     "@shared/app": "workspace:"
     "@shared/exceptions": "workspace:"
     "@types/express": "npm:4.17.21"
@@ -684,6 +684,16 @@ __metadata:
     sequelize: "npm:6.35.2"
     sequelize-typescript: "patch:sequelize-typescript@npm%3A2.1.6#~/.yarn/patches/sequelize-typescript-npm-2.1.6-6cf9e2c703.patch"
     umzug: "npm:3.5.0"
+  languageName: unknown
+  linkType: soft
+
+"@service/routes@workspace:, @service/routes@workspace:routes":
+  version: 0.0.0-use.local
+  resolution: "@service/routes@workspace:routes"
+  dependencies:
+    "@service/controllers": "workspace:"
+    "@shared/app": "workspace:"
+    "@types/express": "npm:4.17.21"
   languageName: unknown
   linkType: soft
 

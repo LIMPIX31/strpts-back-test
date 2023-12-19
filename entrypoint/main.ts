@@ -9,7 +9,7 @@ app.use(express.json())
 
 init(app)
 
-await import('@service/controllers')
+await import('@service/routes')
 
 app.use(errorHandler)
 

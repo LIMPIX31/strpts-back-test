@@ -38,6 +38,9 @@
       "@service/repository": [
         "repository"
       ],
+      "@service/routes": [
+        "routes"
+      ],
       "@service/services": [
         "services"
       ],

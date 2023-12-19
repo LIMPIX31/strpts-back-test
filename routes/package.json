@@ -1,0 +1,11 @@
+{
+	"name": "@service/routes",
+	"main": "mod.ts",
+	"dependencies": {
+		"@service/controllers": "workspace:",
+		"@shared/app": "workspace:"
+	},
+	"devDependencies": {
+		"@types/express": "4.17.21"
+	}
+}
