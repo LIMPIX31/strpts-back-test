@@ -1,3 +1,4 @@
+import { scheduleAllJobs }         from '@service/schedule'
 import express                     from 'express'
 
 import { init }                    from '@shared/app'
@@ -12,6 +13,8 @@ init(app)
 await import('@service/routes')
 
 app.use(errorHandler)
+
+scheduleAllJobs()
 
 const HOST = process.env.HOST ?? '0.0.0.0'
 const PORT = Number(process.env.PORT ?? '9000')

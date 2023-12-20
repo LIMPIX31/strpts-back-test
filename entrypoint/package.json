@@ -5,6 +5,7 @@
 	},
 	"dependencies": {
 		"@service/routes": "workspace:",
+		"@service/schedule": "workspace:",
 		"@shared/app": "workspace:",
 		"@shared/exceptions": "workspace:",
 		"express": "5.0.0-beta.1"

@@ -41,6 +41,9 @@
       "@service/routes": [
         "routes"
       ],
+      "@service/schedule": [
+        "schedule"
+      ],
       "@service/services": [
         "services"
       ],

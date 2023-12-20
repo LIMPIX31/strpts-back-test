@@ -1,0 +1,8 @@
+{
+	"name": "@service/schedule",
+	"main": "mod.ts",
+	"dependencies": {
+		"@service/repository": "workspace:",
+		"cron": "3.1.6"
+	}
+}

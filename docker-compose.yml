@@ -25,8 +25,69 @@ services:
     entrypoint: yarn workspace @service/entrypoint dev
     environment:
       - DB_HOST=postgres
+      - SERVICE_ID=first
     ports:
       - "9000:9000"
+    depends_on:
+      yarn:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_started
+
+  service-second:
+    image: node:21
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn workspace @service/entrypoint dev
+    environment:
+      - DB_HOST=postgres
+      - SERVICE_ID=second
+    depends_on:
+      yarn:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_started
+
+  service-third:
+    image: node:21
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn workspace @service/entrypoint dev
+    environment:
+      - DB_HOST=postgres
+      - SERVICE_ID=third
+    depends_on:
+      yarn:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_started
+
+  service-fourth:
+    image: node:21
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn workspace @service/entrypoint dev
+    environment:
+      - DB_HOST=postgres
+      - SERVICE_ID=fourth
+    depends_on:
+      yarn:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_started
+
+  service-fifth:
+    image: node:21
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn workspace @service/entrypoint dev
+    environment:
+      - DB_HOST=postgres
+      - SERVICE_ID=fifth
     depends_on:
       yarn:
         condition: service_completed_successfully

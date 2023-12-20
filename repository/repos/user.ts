@@ -1,7 +1,7 @@
 import type { WhereOptions } from 'sequelize'
 import      { Op }           from 'sequelize'
 
-import      { User }         from '../models.ts'
+import      { User }         from '../models/user.ts'
 
 export async function updateBalanceById(id: string, amount: number): Promise<User | undefined> {
 	const where: WhereOptions = { id }

@@ -32,3 +32,9 @@ Passed: 5000
 Failed: 5000
 Crashed: 0
 ```
+
+## Часть 2
+Теперь вместо одного контейнера - 5
+```bash
+docker compose up service-first service-second service-third service-fourth service-fifth
+```

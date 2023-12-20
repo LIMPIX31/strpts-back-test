@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize-typescript'
 
-import * as models   from './models.ts'
+import * as models   from './models/mod.ts'
 
 export const connection = new Sequelize({
 	host: process.env.DB_HOST ?? '0.0.0.0',
