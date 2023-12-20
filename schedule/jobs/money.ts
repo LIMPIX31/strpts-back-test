@@ -1,6 +1,6 @@
 export const id = 'money'
 
-export const cron = '0/8 * * * *'
+export const cron = '0/4 * * * *'
 
 export async function execute() {
 	await new Promise((r) => {

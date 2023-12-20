@@ -34,7 +34,15 @@ Crashed: 0
 ```
 
 ## Часть 2
-Теперь вместо одного контейнера - 5
+Выполните миграции, запустив только один из контейнеров.
+```bash
+docker compose up service-first
+```
+
+Запустите все контейнеры
 ```bash
 docker compose up service-first service-second service-third service-fourth service-fifth
 ```
+
+### Пример равномерного распределения задач
+**screenshot here**

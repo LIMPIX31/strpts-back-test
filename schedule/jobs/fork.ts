@@ -1,6 +1,6 @@
 export const id = 'fork'
 
-export const cron = '0/3 * * * *'
+export const cron = '0/4 * * * *'
 
 export async function execute() {
 	await new Promise((r) => {
