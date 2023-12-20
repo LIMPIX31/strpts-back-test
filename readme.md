@@ -45,4 +45,4 @@ docker compose up service-first service-second service-third service-fourth serv
 ```
 
 ### Пример равномерного распределения задач
-**screenshot here**
+![image](https://github.com/LIMPIX31/strpts-back-test/assets/81296950/f2b290a8-6076-430f-b386-210ee87d2240)
